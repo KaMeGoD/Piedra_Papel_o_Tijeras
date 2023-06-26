@@ -1,0 +1,31 @@
+.rules{
+  background-color: white;
+  border-radius: 5px;
+  padding: 20px;
+  width: 350px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.top_rules{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.class_rules{
+  font-size: 30px;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+.rules_close{
+  cursor: pointer;
+}
+.flotante_rules{
+  visibility: hidden;
+  position: absolute;
+  top: 20%;
+  left: 35%;
+}
+.activado{
+  visibility: inherit;
+}
