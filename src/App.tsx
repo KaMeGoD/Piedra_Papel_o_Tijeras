@@ -23,23 +23,23 @@ function App() {
   useEffect(() => {
     const MetodologiaDeJuego = () => {
       if (tipoPicked === tipoRandom) {
-        setWin('Empate');
+        setWin('Tied');
       } else if (
         (tipoPicked === 'paper' && tipoRandom === 'scissors') ||
         (tipoPicked === 'scissors' && tipoRandom === 'rock') ||
         (tipoPicked === 'rock' && tipoRandom === 'paper')
       ) {
-        setWin('Perdiste');
+        setWin('Lose');
       } else if (
         (tipoPicked === 'paper' && tipoRandom === 'rock') ||
         (tipoPicked === 'scissors' && tipoRandom === 'paper') ||
         (tipoPicked === 'rock' && tipoRandom === 'scissors')
       ) {
-        setWin('Ganaste');
+        setWin('Win');
         setScore((prevScore) => prevScore + 1);
       }
     };
-  
+
     MetodologiaDeJuego();
   }, [tipoPicked, tipoRandom]);
 
@@ -89,32 +89,34 @@ function App() {
 
   return (
     <>
-      <div className={`juego ${activadoRules ? 'activoRules' : 'capaNoOculta'}`}>
-        <Score score={score} />
-        <div className={capas ? 'capaNoOculta' : 'capaOculta'}>
-          <TriangleSelector
-            onclickPaper={handleClickPaper}
-            onclickRock={handleClickRock}
-            onclickScissors={handleClickScissor}
-          />
-        </div>
-        <div className={capas ? 'capaOculta' : ''}>
-          <PlayGame
-            victory={win}
-            onClickPlayAgain={handleClickPlayAgain}
-            tipoPicked={tipoPicked}
-            imagenPicked={imgPicked}
-            tipoRandom={tipoRandom}
-            imagenRandom={imgRandom}
-          />
-        </div>
-        <div className='btn_rules'>
-          <button onClick={handleClickRulesOn} className='rules_btn'>
-            Rules
-          </button>
+      <div className={activadoRules ? 'activoRules' : ''}>
+        <div className='juego'>
+          <Score score={score} />
+          <div className={capas ? '' : 'capaOculta'}>
+            <TriangleSelector
+              onclickPaper={handleClickPaper}
+              onclickRock={handleClickRock}
+              onclickScissors={handleClickScissor}
+            />
+          </div>
+          <div className={capas ? 'capaOculta' : ''}>
+            <PlayGame
+              victory={`You ${win}`}
+              onClickPlayAgain={handleClickPlayAgain}
+              tipoPicked={tipoPicked}
+              imagenPicked={imgPicked}
+              tipoRandom={tipoRandom}
+              imagenRandom={imgRandom}
+            />
+          </div>
+          <div className='btn_rules'>
+            <button onClick={handleClickRulesOn} className='rules_btn'>
+              Rules
+            </button>
+          </div>
         </div>
       </div>
-      <Rules activado={activadoRules ? 'activado' : ''} onclickCloseRules={handleClickRulesOff} />
+      <Rules activado={activadoRules ? 'activadoRules' : ''} onclickCloseRules={handleClickRulesOff} />
     </>
   );
 }

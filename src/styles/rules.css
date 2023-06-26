@@ -23,9 +23,9 @@
 .flotante_rules{
   visibility: hidden;
   position: absolute;
-  top: 20%;
-  left: 35%;
+  top: 25%;
+  left: 37%;
 }
-.activado{
-  visibility: inherit;
+.activadoRules{
+  visibility: visible;
 }

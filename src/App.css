@@ -1,14 +1,13 @@
 @import url("https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@600;700&display=swap");
-:root {
-  --ScissorsGradient: hsl(39, 89%, 49%) to hsl(40, 84%, 53%);
-  --PaperGradient: hsl(230, 89%, 62%) to hsl(230, 89%, 65%);
-  --RockGradient: hsl(349, 71%, 52%) to hsl(349, 70%, 56%);
-  --LizardGradient: hsl(261, 73%, 60%) to hsl(261, 72%, 63%);
-  --Cyan: hsl(189, 59%, 53%) to hsl(189, 58%, 57%);
 
-  --DarkText: hsl(229, 25%, 31%);
-  --ScoreText: hsl(229, 64%, 46%);
-  --HeaderOutline: hsl(217, 16%, 45%);
+html{
+  font-size: 62.5%;
+  box-sizing: border-box;
+}
+*,
+*::after,
+*::before{
+  box-sizing: inherit;
 }
 
 * {
@@ -21,9 +20,13 @@ body{
   background: radial-gradient(hsl(214, 47%, 23%), hsl(237, 49%, 15%));
 }
 
+.capaOculta{
+  display: none;
+}
+
 .juego {
-  padding: 20px 250px;
   height: 100vh;
+  padding: 40px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -32,16 +35,20 @@ body{
 .btn_rules {
   display: flex;
   justify-content: end;
+  margin-right: 120px;
+  margin-top: 50px;
+
 }
 .rules_btn {
+  font-size: 1.5rem;
   background: transparent;
   border: 1px solid white;
-  padding: 5px 20px;
+  padding: .5rem 2rem;
   color: white;
   text-transform: uppercase;
   font-weight: 600;
   letter-spacing: 4px;
-  border-radius: 5px;
+  border-radius: .5rem;
   cursor: pointer;
 }
 
@@ -50,9 +57,18 @@ body{
   opacity: 0.3;
 }
 
-.capaOculta{
-  display: none;
-}
-.capaNoOculta{
-  display:inherit;
-}
+/* Hasta 370px */
+/* @media only screen and (max-width: 375px) {
+  body{
+    width: 100%;
+  }
+  #root{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .juego{
+    width: 90%;
+  }
+} */
