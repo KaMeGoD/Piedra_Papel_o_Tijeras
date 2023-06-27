@@ -29,7 +29,7 @@ body{
   padding: 40px;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-around;
 }
 
 .btn_rules {
@@ -37,7 +37,6 @@ body{
   justify-content: end;
   margin-right: 120px;
   margin-top: 50px;
-
 }
 .rules_btn {
   font-size: 1.5rem;
