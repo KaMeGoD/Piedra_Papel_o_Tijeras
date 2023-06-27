@@ -29,3 +29,22 @@
 .activadoRules{
   visibility: visible;
 }
+@media only screen and (max-width: 480px) {
+  .rules{
+    width: 115%;
+    height: 100vh;
+  }
+  .flotante_rules{
+    top: 0;
+    left: 0;
+  }
+  .top_rules{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 80px;
+  }
+  .rules_close{
+    position: absolute;
+    top: 90vh;
+  }
+}

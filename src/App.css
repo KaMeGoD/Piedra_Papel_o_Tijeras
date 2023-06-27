@@ -57,18 +57,14 @@ body{
   opacity: 0.3;
 }
 
-/* Hasta 370px */
-/* @media only screen and (max-width: 375px) {
-  body{
-    width: 100%;
-  }
-  #root{
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
+@media only screen and (max-width: 480px) {
   .juego{
-    width: 90%;
+    padding: 10px;
   }
-} */
+  .rules_btn{
+    padding: 1.5rem 4rem;
+  }
+  .btn_rules{
+    margin: 4rem auto;
+  }
+}

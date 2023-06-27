@@ -14,11 +14,13 @@ interface PropsTriangleSelector{
 export const TriangleSelector: React.FC<PropsTriangleSelector> = ({onclickPaper, onclickScissors, onclickRock}) =>{
   return(
     <>
+    <div className='container-triangle'>
       <div className='triangle-selector '>
         <div onClick={onclickPaper} className='order1'><BtnGame imagen={Paper} tipo='paper' /></div>
         <div onClick={onclickScissors} className='order2'><BtnGame imagen={Scissors} tipo='scissors' /></div>
         <div onClick={onclickRock} className='order3'><BtnGame imagen={Rock} tipo='rock' /></div>
       </div>
+    </div>
     </>
   )
 }

@@ -14,16 +14,16 @@ export const PlayGame: React.FC<PropsPlayGame> = ({ tipoRandom, imagenRandom, vi
   return (
     <>
       <div className="playGame">
-        <div className="picked">
+        <div className="picked youPicked">
           <h3 className="playGame_title">You picked</h3>
           <BtnGame tipo={tipoPicked} imagen={imagenPicked} />
         </div>
-        <div>
+        <div className="you_victory">
           <h2 className="victory">{victory}</h2>
           <button onClick={onClickPlayAgain} className="btn_playGame">Play Again</button>
         </div>
-        <div className="picked">
-          <h3 className="playGame_title">You picked</h3>
+        <div className="picked randomPiked">
+          <h3 className="playGame_title">The house Picked</h3>
           <BtnGame tipo={tipoRandom} imagen={imagenRandom} /></div>
       </div>
     </>

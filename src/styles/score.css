@@ -30,3 +30,64 @@
   font-size: 4rem;
   font-weight: 700;
 }
+
+/* Hasta 375px */
+@media only screen and (max-width: 375px ) {
+  .bloque{
+    width: 100%;
+  }
+  .bloque img{
+    width: 100px;
+  }
+  .score{
+    width: 9rem;
+    height: 9rem;
+  }
+}
+/* Hasta 390px */
+@media only screen and (max-width: 390px) {
+  .bloque{
+    width: 100%;
+  }
+  .bloque img{
+    width: 100px;
+  }
+  .score{
+    width: 9rem;
+    height: 9rem;
+  }
+}
+/* Estilos para dispositivos móviles (hasta 375px) */
+@media only screen and (max-width: 375px) {
+  .bloque{
+    width: 100%;
+  }
+  .bloque img{
+    width: 100px;
+  }
+  .score{
+    width: 9rem;
+    height: 9rem;
+  }
+}
+/* Estilos para dispositivos móviles en orientación vertical */
+@media only screen and (max-width: 375px) and (orientation: portrait) {
+
+}
+/* Estilos para dispositivos móviles (hasta 480px) */
+@media only screen and (max-width: 480px) {
+  .bloque{
+    width: 100%;
+  }
+  .bloque img{
+    width: 100px;
+  }
+  .score{
+    width: 9rem;
+    height: 9rem;
+  }
+}
+/* Estilos para dispositivos móviles en orientación vertical */
+@media only screen and (max-width: 480px) and (orientation: portrait) {
+
+}
